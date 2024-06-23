@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <script>
+        // Скрипт для кнопки, выводящей дату в формате секунды-часы
+        function showDate() {
+            const date = new Date();
+            const seconds = date.getSeconds();
+            const hours = date.getHours();
+            alert(`Секунды: ${seconds}, Часы: ${hours}`);
+        }
+
+        // Внешний скрипт, рассчитывающий функцию
+        function calculateY(x) {
+            try {
+                if (x < -3 || x > 3) {
+                    throw new Error("x должен быть в диапазоне от -3 до 3");
+                }
+                const y = 2 - Math.sqrt(9 - x * x);
+                return y;
+            } catch (error) {
+                return `Ошибка: ${error.message}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showDate()">Показать дату</button>
+
+    <script>
+        // Скрипт с while, выводящий текст 13 раз
+        let i = 0;
+        while (i < 13) {
+            document.write("Косенко Арсений<br>");
+            i++;
+        }
+
+        // Массив из 8 целых чисел
+        const array = [1, 4, 8, 12, 16, 20, 24, 28];
+
+        // Подсчет количества элементов, кратных 4
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 4 === 0) {
+                count++;
+            }
+        }
+
+        // Переворот массива
+        const reversedArray = array.slice().reverse();
+
+        // Вывод исходного и измененного массивов
+        document.write("<br>Исходный массив: " + array.join(", "));
+        document.write("<br>Количество элементов, кратных 4: " + count);
+        document.write("<br>Измененный массив: " + reversedArray.join(", "));
+
+        // Работа со строками
+        const s1 = "Я люблю Беларусь";
+        const s2 = "Я учусь в Политехническом колледже";
+
+        // Длина строки s1
+        const lengthS1 = s1.length;
+
+        // Восьмой символ строки s1
+        const eighthChar = s1.charAt(7);
+
+        // ASCII код восьмого символа
+        const asciiCode = eighthChar.charCodeAt(0);
+
+        // Замена 'о' на 'а' в строке s2
+        const modifiedS2 = s2.replace(/о/g, 'а');
+
+        // Вывод информации
+        document.write("<br>Длина строки s1: " + lengthS1);
+        document.write("<br>Восьмой символ строки s1: " + eighthChar);
+        document.write("<br>ASCII код восьмого символа: " + asciiCode);
+        document.write("<br>Измененная строка s2: " + modifiedS2);
+    </script>
+
+    <form onsubmit="event.preventDefault(); calculateAndShow();">
+        <label for="xValue">Введите значение x (-3 <= x <= 3): </label>
+        <input type="number" id="xValue" step="0.1" min="-3" max="3">
+        <input type="submit" value="Рассчитать">
+    </form>
+    <div id="result"></div>
+    <script>
+        function calculateAndShow() {
+            const x = parseFloat(document.getElementById('xValue').value);
+            const result = calculateY(x);
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>

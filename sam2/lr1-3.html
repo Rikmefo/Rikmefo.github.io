@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="lr4.css">
+    <style>
+      @import url("style.css");
+      .table th {
+        color: black;
+    background-color: #f2f2f2; /* Цвет фона заголовков */
+    padding: 8px; /* Внутренние отступы заголовков */
+    text-align: left; /* Выравнивание текста по левому краю */
+    border-bottom: 1px solid #ddd; /* Граница снизу */
+}
+.table td {
+    padding: 8px; /* Внутренние отступы ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+    border-bottom: 1px solid #ddd; /* Граница снизу */
+}
+h2 {
+        
+            font-size: 24px; /* Ваш размер шрифта для h1 */
+            /* Другие стили, если нужны */
+        }
+        body {
+          color: white;
+    background-color: #000000; /* Цвет фона */
+    background-image: url('background.jpg'); /* Фоновое изображение */
+    background-size: cover; /* Масштабирование изображения для заполнения всего фона */
+    background-position: center; /* Расположение изображения по центру */
+    /* Другие стили фона */
+}
+a:link {
+    color: blue; /* Цвет текста */
+    text-decoration: none; /* Удаление подчеркивания */
+}
+
+/* Стили для посещенной ссылки */
+a:visited {
+    color: purple; /* Изменение цвета после посещения */
+}
+
+/* Стили при наведении на ссылку */
+a:hover {
+    color: red; /* Изменение цвета при наведении */
+    text-decoration: underline; /* Добавление подчеркивания при наведении */
+}
+
+/* Стили для активной ссылки (нажатие) */
+a:active {
+    color: green; /* Изменение цвета при нажатии */
+}
+    </style>
+</head>
+<body>
+  <audio controls>
+    <source src="Source/for-elevator-jazz-music-124005.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает тег.
+</audio>
+<!-- Видео -->
+<h2>Любимые видео:</h2>
+<video width="320" height="240" controls>
+    <source src="Source/file_example_MP4_1280_10MG.mp4" type="video/mp4">
+    Ваш браузер не поддерживает тег.
+</video>
+    <a href="#part1" id="part2">Вниз</a> <!--Якорная ссылка-->
+    <h1>Резюме</h1>
+    <h3>Косенко Арсений</h3>
+        <p class="p::first-line">
+            <b>Желаемая должность:</b>
+        <br>
+        Frontend-разработчик
+        </p>
+    <h2>Ключевые навыки:</h2>
+    <ul>
+        <li>Опыт рарзработок макетов сайта в Figma, Tilda</li>
+        <li>Умение работы в Visual Studio Code</li>
+        <li class="text-style">Опыт составления документации</li>
+    </ul>
+    <table class="table">
+        <tr >
+          <th>ФИО</th> 
+          <td>Косенко Арсений Олегович</td>
+        </tr>
+        <tr>
+          <th>Возраст</th>
+          <td>18 лет</td>
+        </tr>
+        <tr>
+          <th>Образование</th>
+          <td>Средне специальное</td>
+        </tr>
+        <tr>
+          <th>Опыт работы</th>
+          <td>Разработка макетов сайта,игры на unity</td>
+        </tr>
+        <tr>
+          <th>Навыки</th>
+          <td>HTML, C#</td>
+        </tr>
+      </table>
+      <button>Кнопка</button>
+<form action="#"> <!--Создание формы-->
+  <label for="name">Имя:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="age">Возраст:</label>
+  <input type="number" id="age" name="age"><br><br>
+
+  <label for="education">Образование:</label> 
+  <select id="education" name="education">
+    <option value="high_school">Среднее образование</option>
+    <option value="college">Колледж</option>
+    <option value="university">Университет</option>
+  </select><br><br>
+
+  <label for="experience">Опыт работы:</label>
+  <textarea id="experience" name="experience"></textarea><br><br>
+
+  <label for="skills"> Навыки:</label> 
+  <br>
+  <input type="checkbox" id="html" name="skills[]" value="html">
+  <label for="html">HTML</label><br>
+  <input type="checkbox" id="css" name="skills[]" value="css">
+  <label for="css">CSS</label><br>
+  <input type="checkbox" id="javascript" name="skills[]" value="javascript">
+  <label for="javascript">JavaScript</label><br>
+  <input type="checkbox" id="php" name="skills[]" value="php">
+  <label for="php">PHP</label><br><br>
+
+  <input type="submit" value="Отправить резюме">
+</form>
+    <h2>Обратная связь:</h2>
+        <p>
+            <img src="D:/Work/psip/Code/Source/vk.png" alt="<текст>" style="width: 300px; border: 1px solid black; border-radius: 10px;">
+            <a href="https://id.vk.com/account/#/mai">VK</a>
+        </p>
+        <a href="#part2"  id="part1">Вверх</a> <!--Якорная ссылка-->
+</body>
+</html>

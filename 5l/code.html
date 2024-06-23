@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .setka{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.col-100{
+    width: 100%;
+    text-align: center;
+    background-color: red
+}
+.col-50{
+    width: 50%;
+    text-align: center;
+    background-color: blue
+}
+.col-25{
+    width: 25%;
+    text-align: center;
+
+}
+.col-75{
+    width: 75%;
+    text-align: center;
+  
+}
+.item {
+  background-color: #ccc;
+  margin: 10px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-container > div {
+  margin-right: 10px; /* Задает отступ между элементами */
+}
+.flex-container1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item1 {
+
+  flex-basis: 200px; /* Задает размер элемента */
+}
+.order{
+    order : 2 ;    /* Задает порядок элемента */
+}
+    </style>
+</head>
+<body>
+    <div class="setka">
+        <div class="col-100">
+            Шапка
+        </div>
+        <div class="col-100 item flex-container"  >
+        <p >Главная </p><p>Каталог </p><p>Новости</p>
+        </div>
+        <div class="col-50 flex-container1 ">
+            <div class="flex-item1 order">Элемент 1</div>
+  <div class="flex-item1 ">Элемент 2</div>
+  <div class="flex-item1">Элемент 3</div>
+        </div>
+        <div class="col-50">
+            3
+        </div>
+        <div class="col-25">
+            4
+        </div>
+        <div class="col-25">
+            5
+        </div>
+        <div class="col-25">
+            6
+        </div>
+        <div class="col-100">
+            7
+        </div>
+        <div class="col-50">
+            8
+        </div>
+        <div class="col-50">
+            9
+        </div>
+        <div class="col-100">
+            Подвал
+        </div>
+    </div>
+</body>
+</html>
